@@ -72,10 +72,8 @@ resources:
     memory: 256Mi
     cpu: 100m
 
-# A load balander might confuse Minikube when installing with Helm and --wait
-# Probably this is only useful for minikube environments and CI
-loadbalancer:
-  enabled: true
+service:
+  type: Loadbalancer
 
 ## Prometheus Exporters / Metrics
 ##
